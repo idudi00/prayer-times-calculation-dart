@@ -5,10 +5,14 @@ void main() {
   group('CalculationMethod', () {
     test('should have correct display names', () {
       expect(CalculationMethod.mwl.displayName, equals('Muslim World League'));
-      expect(CalculationMethod.isna.displayName, equals('Islamic Society of North America'));
-      expect(CalculationMethod.egypt.displayName, equals('Egyptian General Authority'));
-      expect(CalculationMethod.makkah.displayName, equals('Umm Al-Qura University'));
-      expect(CalculationMethod.karachi.displayName, equals('University of Islamic Sciences, Karachi'));
+      expect(CalculationMethod.isna.displayName,
+          equals('Islamic Society of North America'));
+      expect(CalculationMethod.egypt.displayName,
+          equals('Egyptian General Authority'));
+      expect(CalculationMethod.makkah.displayName,
+          equals('Umm Al-Qura University'));
+      expect(CalculationMethod.karachi.displayName,
+          equals('University of Islamic Sciences, Karachi'));
       expect(CalculationMethod.custom.displayName, equals('Custom'));
     });
 
@@ -24,7 +28,8 @@ void main() {
 
   group('AsrJurisdiction', () {
     test('should have correct display names', () {
-      expect(AsrJurisdiction.standard.displayName, equals('Standard (Shafi/Maliki/Hanbali)'));
+      expect(AsrJurisdiction.standard.displayName,
+          equals('Standard (Shafi/Maliki/Hanbali)'));
       expect(AsrJurisdiction.hanafi.displayName, equals('Hanafi'));
     });
 

@@ -6,7 +6,8 @@ void main() {
     const riyadhLat = 24.7136;
     const riyadhLng = 46.6753;
     const riyadhTimezone = 3.0;
-    final testDate = DateTime.utc(2023, 6, 21); // Summer solstice for better calculation conditions
+    final testDate = DateTime.utc(
+        2023, 6, 21); // Summer solstice for better calculation conditions
 
     group('Validation', () {
       test('should validate latitude bounds', () {
@@ -16,7 +17,8 @@ void main() {
         );
 
         expect(
-          () => PrayerTimesSDK(-91, riyadhLng, testDate, riyadhTimezone, options),
+          () =>
+              PrayerTimesSDK(-91, riyadhLng, testDate, riyadhTimezone, options),
           throwsA(isA<ArgumentError>().having(
             (e) => e.message,
             'message',
@@ -25,7 +27,8 @@ void main() {
         );
 
         expect(
-          () => PrayerTimesSDK(91, riyadhLng, testDate, riyadhTimezone, options),
+          () =>
+              PrayerTimesSDK(91, riyadhLng, testDate, riyadhTimezone, options),
           throwsA(isA<ArgumentError>()),
         );
       });
@@ -37,7 +40,8 @@ void main() {
         );
 
         expect(
-          () => PrayerTimesSDK(riyadhLat, -181, testDate, riyadhTimezone, options),
+          () => PrayerTimesSDK(
+              riyadhLat, -181, testDate, riyadhTimezone, options),
           throwsA(isA<ArgumentError>().having(
             (e) => e.message,
             'message',
@@ -46,7 +50,8 @@ void main() {
         );
 
         expect(
-          () => PrayerTimesSDK(riyadhLat, 181, testDate, riyadhTimezone, options),
+          () =>
+              PrayerTimesSDK(riyadhLat, 181, testDate, riyadhTimezone, options),
           throwsA(isA<ArgumentError>()),
         );
       });
@@ -58,7 +63,8 @@ void main() {
         );
 
         expect(
-          () => PrayerTimesSDK(riyadhLat, riyadhLng, testDate, riyadhTimezone, invalidOptions),
+          () => PrayerTimesSDK(
+              riyadhLat, riyadhLng, testDate, riyadhTimezone, invalidOptions),
           throwsA(isA<ArgumentError>()),
         );
       });
@@ -101,7 +107,7 @@ void main() {
         expect(times.maghrib, matches(timeRegex));
         expect(times.isha, matches(timeRegex));
 
-        print('MWL Calculated times: ${times.toMap()}');
+        // MWL times calculated and validated
       });
     });
 
@@ -148,7 +154,9 @@ void main() {
         expect(times.isha, isNotEmpty);
       });
 
-      test('should throw error when custom method is used without required angles', () {
+      test(
+          'should throw error when custom method is used without required angles',
+          () {
         const optionsWithoutAngles = CalculationOptions(
           method: CalculationMethod.custom,
           asrJurisdiction: AsrJurisdiction.standard,
@@ -216,7 +224,8 @@ void main() {
     });
 
     group('Performance', () {
-      test('should calculate times within performance requirements (<10ms)', () {
+      test('should calculate times within performance requirements (<10ms)',
+          () {
         const options = CalculationOptions(
           method: CalculationMethod.mwl,
           asrJurisdiction: AsrJurisdiction.standard,
@@ -236,14 +245,19 @@ void main() {
 
         final executionTime = stopwatch.elapsedMilliseconds;
         expect(executionTime, lessThan(10));
-        print('Execution time: ${executionTime}ms');
+        // Execution time logged for performance verification
       });
     });
 
     group('Different Locations', () {
       test('should calculate prayer times for different locations', () {
         final locations = [
-          {'name': 'New York', 'lat': 40.7128, 'lng': -74.0060, 'timezone': -5.0},
+          {
+            'name': 'New York',
+            'lat': 40.7128,
+            'lng': -74.0060,
+            'timezone': -5.0
+          },
           {'name': 'London', 'lat': 51.5074, 'lng': -0.1278, 'timezone': 0.0},
           {'name': 'Tokyo', 'lat': 35.6762, 'lng': 139.6503, 'timezone': 9.0},
         ];
@@ -272,7 +286,7 @@ void main() {
           expect(times.maghrib, matches(timeRegex));
           expect(times.isha, matches(timeRegex));
 
-          print('${location['name']} times: ${times.toMap()}');
+          // Times calculated for location verification
         }
       });
     });
@@ -305,7 +319,7 @@ void main() {
           expect(times.fajr, isNotEmpty);
           expect(times.isha, isNotEmpty);
 
-          print('${method.key} times: ${times.toMap()}');
+          // Times calculated for method verification
         }
       });
     });

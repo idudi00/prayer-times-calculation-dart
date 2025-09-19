@@ -59,7 +59,8 @@ void main() {
       final declination = -23.0; // Winter solstice approximation
       final angle = -18.0; // Fajr angle
 
-      final hourAngle = Astronomical.calculateHourAngle(latitude, declination, angle);
+      final hourAngle =
+          Astronomical.calculateHourAngle(latitude, declination, angle);
       expect(hourAngle, isNot(isNaN));
       expect(hourAngle, greaterThan(0));
       expect(hourAngle, lessThan(180));
@@ -70,7 +71,8 @@ void main() {
       final declination = -23.0;
       final angle = -18.0;
 
-      final hourAngle = Astronomical.calculateHourAngle(latitude, declination, angle);
+      final hourAngle =
+          Astronomical.calculateHourAngle(latitude, declination, angle);
       // Might be NaN for extreme latitudes
       expect(hourAngle, anyOf(isNaN, isNotNaN));
     });
@@ -109,7 +111,8 @@ void main() {
 
     test('should handle time overflow in addMinutes', () {
       expect(Astronomical.addMinutes('23:59', 1), equals('00:00'));
-      expect(Astronomical.addMinutes('12:00', 1440), equals('12:00')); // 24 hours
+      expect(
+          Astronomical.addMinutes('12:00', 1440), equals('12:00')); // 24 hours
     });
   });
 }

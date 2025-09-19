@@ -16,19 +16,22 @@ void main() {
     });
 
     test('should return correct angles for Egypt method', () {
-      final angles = CalculationMethods.getMethodAngles(CalculationMethod.egypt);
+      final angles =
+          CalculationMethods.getMethodAngles(CalculationMethod.egypt);
       expect(angles.fajr, equals(19.5));
       expect(angles.isha, equals(17.5));
     });
 
     test('should return correct angles for Makkah method', () {
-      final angles = CalculationMethods.getMethodAngles(CalculationMethod.makkah);
+      final angles =
+          CalculationMethods.getMethodAngles(CalculationMethod.makkah);
       expect(angles.fajr, equals(18.5));
       expect(angles.isha, equals(18.5));
     });
 
     test('should return correct angles for Karachi method', () {
-      final angles = CalculationMethods.getMethodAngles(CalculationMethod.karachi);
+      final angles =
+          CalculationMethods.getMethodAngles(CalculationMethod.karachi);
       expect(angles.fajr, equals(18.0));
       expect(angles.isha, equals(18.0));
     });
@@ -84,12 +87,18 @@ void main() {
     });
 
     test('should check predefined angles correctly', () {
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.mwl), isTrue);
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.isna), isTrue);
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.egypt), isTrue);
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.makkah), isTrue);
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.karachi), isTrue);
-      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.custom), isFalse);
+      expect(
+          CalculationMethods.hasPredefineAngles(CalculationMethod.mwl), isTrue);
+      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.isna),
+          isTrue);
+      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.egypt),
+          isTrue);
+      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.makkah),
+          isTrue);
+      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.karachi),
+          isTrue);
+      expect(CalculationMethods.hasPredefineAngles(CalculationMethod.custom),
+          isFalse);
     });
 
     test('should return correct method descriptions', () {
@@ -111,7 +120,8 @@ void main() {
       );
       expect(
         CalculationMethods.getMethodDescription(CalculationMethod.karachi),
-        equals('University of Islamic Sciences, Karachi (Fajr: 18°, Isha: 18°)'),
+        equals(
+            'University of Islamic Sciences, Karachi (Fajr: 18°, Isha: 18°)'),
       );
       expect(
         CalculationMethods.getMethodDescription(CalculationMethod.custom),

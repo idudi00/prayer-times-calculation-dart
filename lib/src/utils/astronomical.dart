@@ -47,7 +47,8 @@ class Astronomical {
     final n = jd - 2451545.0;
     final l = normalizeAngle(280.460 + 0.9856474 * n);
     final g = degreesToRadians(normalizeAngle(357.528 + 0.9856003 * n));
-    final lambda = degreesToRadians(l + 1.915 * math.sin(g) + 0.020 * math.sin(2 * g));
+    final lambda =
+        degreesToRadians(l + 1.915 * math.sin(g) + 0.020 * math.sin(2 * g));
 
     final alpha = math.atan2(
       math.cos(degreesToRadians(23.439)) * math.sin(lambda),
@@ -65,7 +66,8 @@ class Astronomical {
     final n = jd - 2451545.0;
     final l = normalizeAngle(280.460 + 0.9856474 * n);
     final g = degreesToRadians(normalizeAngle(357.528 + 0.9856003 * n));
-    final lambda = degreesToRadians(l + 1.915 * math.sin(g) + 0.020 * math.sin(2 * g));
+    final lambda =
+        degreesToRadians(l + 1.915 * math.sin(g) + 0.020 * math.sin(2 * g));
 
     return radiansToDegrees(
       math.asin(math.sin(degreesToRadians(23.439)) * math.sin(lambda)),
@@ -73,13 +75,15 @@ class Astronomical {
   }
 
   /// Calculate hour angle
-  static double calculateHourAngle(double latitude, double declination, double angle) {
+  static double calculateHourAngle(
+      double latitude, double declination, double angle) {
     final latRad = degreesToRadians(latitude);
     final decRad = degreesToRadians(declination);
     final angleRad = degreesToRadians(angle);
 
-    final cosHourAngle = (math.sin(angleRad) - math.sin(decRad) * math.sin(latRad)) /
-        (math.cos(decRad) * math.cos(latRad));
+    final cosHourAngle =
+        (math.sin(angleRad) - math.sin(decRad) * math.sin(latRad)) /
+            (math.cos(decRad) * math.cos(latRad));
 
     if (cosHourAngle.abs() > 1) {
       return double.nan;

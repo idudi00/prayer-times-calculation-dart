@@ -37,7 +37,8 @@ void basicExample() {
     asrJurisdiction: AsrJurisdiction.standard,
   );
 
-  final prayerTimes = PrayerTimesSDK(latitude, longitude, date, timezone, options);
+  final prayerTimes =
+      PrayerTimesSDK(latitude, longitude, date, timezone, options);
   final times = prayerTimes.getTimes();
 
   print('Date: ${date.toLocal().toString().split(' ')[0]}');
@@ -82,7 +83,8 @@ void methodComparison() {
       asrJurisdiction: AsrJurisdiction.standard,
     );
 
-    final prayerTimes = PrayerTimesSDK(latitude, longitude, date, timezone, options);
+    final prayerTimes =
+        PrayerTimesSDK(latitude, longitude, date, timezone, options);
     final times = prayerTimes.getTimes();
 
     print('${method.displayName}:');
@@ -99,7 +101,12 @@ void worldLocations() {
     {'name': 'Mecca, Saudi Arabia', 'lat': 21.4225, 'lng': 39.8262, 'tz': 3.0},
     {'name': 'Istanbul, Turkey', 'lat': 41.0082, 'lng': 28.9784, 'tz': 3.0},
     {'name': 'Cairo, Egypt', 'lat': 30.0444, 'lng': 31.2357, 'tz': 2.0},
-    {'name': 'Kuala Lumpur, Malaysia', 'lat': 3.1390, 'lng': 101.6869, 'tz': 8.0},
+    {
+      'name': 'Kuala Lumpur, Malaysia',
+      'lat': 3.1390,
+      'lng': 101.6869,
+      'tz': 8.0
+    },
     {'name': 'London, UK', 'lat': 51.5074, 'lng': -0.1278, 'tz': 0.0},
   ];
 
@@ -123,7 +130,8 @@ void worldLocations() {
 
     print('${location['name']}:');
     print('  Method: ${options.method.displayName}');
-    print('  Fajr: ${times.fajr}, Dhuhr: ${times.dhuhr}, Maghrib: ${times.maghrib}');
+    print(
+        '  Fajr: ${times.fajr}, Dhuhr: ${times.dhuhr}, Maghrib: ${times.maghrib}');
     print('');
   }
 }
@@ -191,7 +199,8 @@ void customAnglesExample() {
     asrJurisdiction: AsrJurisdiction.hanafi,
   );
 
-  final prayerTimes = PrayerTimesSDK(latitude, longitude, date, timezone, customOptions);
+  final prayerTimes =
+      PrayerTimesSDK(latitude, longitude, date, timezone, customOptions);
   final times = prayerTimes.getTimes();
 
   print('Location: London, UK');
@@ -222,7 +231,8 @@ void performanceTest() {
     asrJurisdiction: AsrJurisdiction.standard,
   );
 
-  final prayerTimes = PrayerTimesSDK(latitude, longitude, date, timezone, options);
+  final prayerTimes =
+      PrayerTimesSDK(latitude, longitude, date, timezone, options);
 
   // Warmup
   for (int i = 0; i < 10; i++) {
