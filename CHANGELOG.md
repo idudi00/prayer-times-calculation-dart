@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2024-01-19
+## [1.0.1] - 2025-01-20
 
 ### Fixed
 - Code formatting issues across all source files
@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Excluded example directory from avoid_print lint rule
 - Updated analysis_options.yaml configuration
 
-## [1.0.0] - 2024-01-19
+## [1.0.0] - 2025-01-20
 
 ### Added
 - Initial release of Prayer Times Calculation SDK for Dart and Flutter
