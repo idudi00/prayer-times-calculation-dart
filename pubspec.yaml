@@ -1,0 +1,25 @@
+name: prayer_times_calculation
+description: Minimalist & offline Prayer Times calculation SDK for Dart and Flutter
+version: 1.0.0
+homepage: https://github.com/Muslims-Community/prayer-times-calculation-dart
+repository: https://github.com/Muslims-Community/prayer-times-calculation-dart
+issue_tracker: https://github.com/Muslims-Community/prayer-times-calculation-dart/issues
+
+environment:
+  sdk: '>=2.17.0 <4.0.0'
+
+dev_dependencies:
+  test: ^1.21.0
+  lints: ^2.0.0
+
+topics:
+  - prayer-times
+  - islam
+  - salah
+  - offline
+  - calculation
+  - dart
+  - flutter
+
+funding:
+  - https://github.com/sponsors/mahmoudalsaman
